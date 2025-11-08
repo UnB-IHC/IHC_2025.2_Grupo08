@@ -2,10 +2,10 @@
 
 ![Logo](assets/unb.png)
 
-Disciplina: Interação Humano Computador – FGA0173
-Professora: Rejane Maria da Costa Figueiredo
-Turma T02 – 2025-02
-Grupo 8
+* Disciplina: Interação Humano Computador – FGA0173
+* Professora: Rejane Maria da Costa Figueiredo
+* Turma T02 – 2025-02
+* Grupo 8
 
 ## Descrição
 

@@ -2,10 +2,10 @@ site_name: Documentação Guia de Acessiblidade Digital
 
 nav:
   - Página Inicial: index.md
-  - Guia de Acessiblidade: guia_acessibilidade.md
-  - Guia Aplicado em Site Real: aplicacao.md
-  - Sobre a extensão: extensao.md
-  - Referências: referencias.md
+  - Guia de Acessiblidade: guia_acessibilidade/guia_acessibilidade.md
+  - Guia Aplicado em Site Real: aplicacao/aplicacao.md
+  - Sobre a extensão: extensao/extensao.md
+  - Referências: referencias/referencias.md
   
 theme:
   name: material
