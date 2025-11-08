@@ -1,8 +1,8 @@
 # Guia de Acessibilidade Digital - Grupo 4 IHC 2025.2
 
-Somos o Grupo 4 de Interação Humano-Computador (IHC) 2025.2. Para o projeto final da disciplina, desenvolvemos um **Guia de Acessibilidade Digital** focado em tornar experiências **no site da Secretaria de Educação do DF** mais inclusivas.
+Somos o Grupo 8 de Interação Humano-Computador (IHC) 2025.2. Para o projeto final da disciplina, desenvolvemos um **Guia de Acessibilidade Digital** focado em tornar experiências **no site da Secretaria de Educação do DF** mais inclusivas.
 
-Como aplicação prática, criamos uma **extensão de navegador** que aplica os critérios de acessibilidade ao site da Secretaria, sem alterar o site original, oferecendo aos usuários uma camada extra de acessibilidade.
+Como aplicação prática, criamos uma **extensão de navegador** que aplica os critérios de acessibilidade ao site da Secretaria, sem alterar o site original, oferecendo aos usuários uma avaliação acerca dos aspectos de usabilidade de um site referenciados pelos critérios do guia.
 
 O guia segue normas nacionais e internacionais ("incluir") e contém checklists, exemplos e critérios que orientam a implementação das melhorias na extensão.
 
