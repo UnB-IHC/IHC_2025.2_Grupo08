@@ -40,6 +40,13 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji
+  - pymdownx.tasklist:
+      clickable_checkbox: true
 
 extra_css:
   - css/custom.css
