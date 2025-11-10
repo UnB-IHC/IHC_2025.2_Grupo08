@@ -1,18 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Verificador de acessibilidade.",
-    "version": "0.1",
-    "description": "Verifica critérios de acessiblidade no site atual.",
-    "permissions": [ "activeTab", "scripting", "storage" ],
-    "action": { "default_popup": "popup.html" },
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content/axe.min.js", "content/content.js"],
-            "run_at": "document_idle"
-        }
+  "manifest_version": 3,
+  "name": "Verificador de acessibilidade",
+  "version": "0.1",
+  "description": "Verifica critérios de acessibilidade no site atual.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": [
+      "content/axe.config.js",
+      "content/axe.min.js",
+      "content/content.js"
     ],
-    "web_accessible_resources": [
+    "run_at": "document_idle"
+  }
+],
+  "web_accessible_resources": [
     {
       "resources": [
         "content/axe.min.js",
