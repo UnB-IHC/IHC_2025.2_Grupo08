@@ -7,13 +7,13 @@
 * Turma T02 – 2025-02
 * Grupo 8
 
-## Descrição
+## Descrição  
 
-Para o projeto da disciplina Interação Humano-Computador, a equipe desenvolve um Guia de Acessibilidade Digital, que tem como objetivo ser uma ferramenta para avaliar a usabilidade de um sistema digital, a partir de normas como WCAG, NBR 17225 e as 10 Heurísticas de Nielsen.
+Para o projeto da disciplina Interação Humano-Computador da Universidade de Brasília, a equipe desenvolve um **Guia de Acessibilidade Digital**, cujo objetivo é oferecer uma ferramenta de apoio para a avaliação da usabilidade e acessibilidade de sistemas digitais, com base em normas e diretrizes reconhecidas, como **WCAG**, **NBR 17225** e as **10 Heurísticas de Nielsen**.  
 
-Como partes integrantes do projeto, realiza-se a avaliação da seção "Contrato Temporário" do site da Secretaria de Estado de Educação - DF.
+Além de servir como referência teórica, o guia tem como propósito permitir que, em projetos futuros, a equipe possa retomar o material e verificar se o produto desenvolvido está acessível, garantindo a inclusão e a conformidade com boas práticas de design universal.  
 
-Além disso, é desenvolvida uma extensão de navegador que servirá como ferramenta para aplicar a avaliação de usabilidade de sistemas digitais, com base nos critérios definidos pela equipe no Guia de Acessibilidade.
+O público-alvo do guia são estudantes, desenvolvedores, designers e profissionais da área de tecnologia que desejam aplicar princípios de acessibilidade e usabilidade em seus projetos digitais.
 
 ## Equipe
 <table>
