@@ -19,6 +19,7 @@
                 if (!element) return;
 
                 // Adiciona borda vermelha no elemento
+                element.classList.add("a11y-highlight");
                 element.style.outline = "3px solid #e33";
                 element.style.position = element.style.position || "relative";
 

@@ -38,8 +38,10 @@ document.getElementById("clearBtn").addEventListener("click", async () => {
       // remove ícones e tooltips
       document.querySelectorAll(".a11y-marker, .marker-tooltip").forEach(el => el.remove());
       // remove bordas
-      document.querySelectorAll("*").forEach(el => {
-        if (el.style.outline === "3px solid #e33") el.style.outline = "";
+      document.querySelectorAll(".a11y-highlight, .a11y-marker, .marker-tooltip")
+      .forEach(el => {
+        el.classList.remove("a11y-highlight");
+        el.style.outline = "";
       });
     }
   });
