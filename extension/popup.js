@@ -29,3 +29,18 @@ document.getElementById("runBtn").addEventListener("click", async () => {
     });
   });
 });
+
+document.getElementById("clearBtn").addEventListener("click", async () => {
+  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  await chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    func: () => {
+      // remove ícones e tooltips
+      document.querySelectorAll(".a11y-marker, .marker-tooltip").forEach(el => el.remove());
+      // remove bordas
+      document.querySelectorAll("*").forEach(el => {
+        if (el.style.outline === "3px solid #e33") el.style.outline = "";
+      });
+    }
+  });
+});

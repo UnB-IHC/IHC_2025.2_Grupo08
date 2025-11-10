@@ -14,47 +14,56 @@
 
           results.violations.forEach((v) => {
             v.nodes.forEach((n) => {
-                n.target.forEach((t) => {
-                    const element = document.querySelector(t);
+              n.target.forEach((t) => {
+                const element = document.querySelector(t);
+                if (!element) return;
 
-                    const infoDiv = document.createElement("div");
-                    infoDiv.style.width = "auto";
-                    infoDiv.style.display = "flex";
-                    infoDiv.style.backgroundColor = "white";
-                    infoDiv.style.paddingTop = "5px";
-                    infoDiv.style.paddingBottom = "5px";
+                // Adiciona borda vermelha no elemento
+                element.style.outline = "3px solid #e33";
+                element.style.position = element.style.position || "relative";
 
+                // Cria o ícone de alerta flutuante
+                const icon = document.createElement("img");
+                icon.src = chrome.runtime.getURL("images/alert.png");
+                icon.alt = "Problema de acessibilidade detectado";
+                icon.className = "a11y-marker";
+                icon.style.width = "24px";
+                icon.style.height = "24px";
+                icon.style.position = "absolute";
+                icon.style.top = "-12px";
+                icon.style.right = "-12px";
+                icon.style.zIndex = "999999";
+                icon.style.cursor = "pointer";
+                icon.title = n.failureSummary;
 
-                    const info = document.createElement("img");
-                    info.src = chrome.runtime.getURL("images/alert.png");
-                    info.alt = "Violação de acessibilidade detectada";
-                    info.style.width = "20px";
-                    info.style.height = "20px";
-                    info.style.marginLeft = "5px";
-                    info.style.verticalAlign = "middle";
-                    info.style.zIndex = "99999";
-                    info.style.position = "relative";
-                    info.style.borderRadius = "45%";
+                // Tooltip customizado (ao passar o mouse)
+                icon.addEventListener("mouseenter", () => {
+                  const tooltip = document.createElement("div");
+                  tooltip.className = "marker-tooltip";
+                  tooltip.textContent = n.failureSummary;
+                  tooltip.style.position = "fixed";
+                  tooltip.style.background = "#fff";
+                  tooltip.style.border = "1px solid #e33";
+                  tooltip.style.padding = "6px 8px";
+                  tooltip.style.borderRadius = "6px";
+                  tooltip.style.boxShadow = "0 2px 8px rgba(0,0,0,0.2)";
+                  tooltip.style.top = (event.clientY + 10) + "px";
+                  tooltip.style.left = (event.clientX + 10) + "px";
+                  tooltip.style.zIndex = "999999";
+                  tooltip.style.maxWidth = "250px";
+                  tooltip.style.fontSize = "13px";
+                  tooltip.style.color = "#000";
+                  document.body.appendChild(tooltip);
 
-                    const hoverText = document.createElement("div");
-                    hoverText.style.color = "black";
-                    hoverText.innerText = n.failureSummary;
-                    // hoverText.addEventListener("mouseover", () => {
-                    //     hoverText.style.display = "none";
-                    //     hoverText.style.visibility = "hidden";
-                    // })
-                    // hoverText.addEventListener("mouseleave", () => {
-                    //     hoverText.style.display = "none";
-                    //     hoverText.style.visibility = "hidden";
-                    // })
+                  icon.addEventListener("mouseleave", () => {
+                    tooltip.remove();
+                  }, { once: true });
+                });
 
-                    infoDiv.appendChild(info);
-                    infoDiv.appendChild(hoverText);
-
-                    element.append(infoDiv);
-                })
-            })
-        })
+                element.appendChild(icon);
+              });
+            });
+          });
         });
 
         return true; // mantém o canal aberto para resposta assíncrona
