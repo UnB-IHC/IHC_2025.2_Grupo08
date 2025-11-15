@@ -3,7 +3,7 @@ site_name: Documentação Guia de Acessiblidade Digital
 nav:
   - Página Inicial: index.md
   - Guia de Acessiblidade: guia_acessibilidade/guia_acessibilidade.md
-  - Referências: referencias/referencias.md
+  - Referências e Ferramentas: referencias/referencias.md
   
 theme:
   name: material
