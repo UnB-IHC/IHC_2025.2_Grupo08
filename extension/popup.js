@@ -10,9 +10,6 @@ document.getElementById("runBtn").addEventListener("click", async () => {
     if (!response) { status.textContent = "Sem resposta."; return; }
     if (!response.success) { status.textContent = "Erro: " + response.error; return; }
 
-    console.log(response);
-
-
     const results = response.results;
     if (!results.violations.length) {
       status.textContent = "Nenhum problema encontrado 🎉";
