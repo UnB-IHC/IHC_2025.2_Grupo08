@@ -11,8 +11,10 @@
   {
     "matches": ["<all_urls>"],
     "js": [
-      "content/axe.config.js",
       "content/axe.min.js",
+      "content/axe.config.js",
+      "content/pt_BR.js",
+      "content/translator.js",
       "content/content.js"
     ],
     "run_at": "document_idle"
@@ -21,8 +23,6 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "content/axe.min.js",
-        "content/axe.config.js",
         "images/*"
       ],
       "matches": ["<all_urls>"]
