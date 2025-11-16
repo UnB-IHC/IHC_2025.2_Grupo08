@@ -2,7 +2,12 @@ site_name: Documentação Guia de Acessiblidade Digital
 
 nav:
   - Página Inicial: index.md
-  - Guia de Acessiblidade: guia_acessibilidade/guia_acessibilidade.md
+  - Guia de Acessiblidade:
+      - Sobre: guia_acessibilidade/sobre.md
+      - Gestão de Projetos: guia_acessibilidade/guia_gestao.md
+      - Desenvolvimento: guia_acessibilidade/guia_desenvolvimento.md
+      - Design: guia_acessibilidade/guia_design.md
+      - Conteúdo: guia_acessibilidade/guia_conteudo.md
   - Referências e Ferramentas: referencias/referencias.md
   
 theme:
