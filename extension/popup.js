@@ -43,3 +43,14 @@ document.getElementById("clearBtn").addEventListener("click", async () => {
     }
   });
 });
+
+$(function(){
+          document.getElementById("projeto").addEventListener("click", () => {
+            $("#checklist").load("partials/projectChecklist.html"); 
+          });
+          document.getElementById("guia").addEventListener("click", () => {
+            $("#checklist").load("partials/projectChecklist.html"); 
+          });
+
+        });
+

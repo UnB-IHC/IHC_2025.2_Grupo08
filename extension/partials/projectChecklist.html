@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <title>Checklist de Acessibilidade — Listas por Área</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    /* style separado conforme solicitado */
+    :root{
+      --bg:#fff; --text:#111; --muted:#666; --accent:#0b5fff;
+      --card:#f8f9fb; --focus-outline: 3px solid #ffd54f;
+    }
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); margin:24px;}
+    h1{font-size:1.5rem; margin-bottom:.25rem;}
+    h2{font-size:1.15rem; margin:18px 0 8px;}
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px;}
+    .card{background:var(--card); padding:14px; border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,.04);}
+    .list{list-style:none; margin:0; padding:0;}
+    .item{display:flex; align-items:flex-start; gap:10px; padding:8px; border-radius:8px;}
+    .checkbox{margin-top:4px;}
+    .label{flex:1; display:flex; flex-direction:column;}
+    .title-line{display:flex; gap:8px; align-items:center; justify-content:space-between;}
+    .crit-title{font-weight:600;}
+    .sub{font-size:.9rem; color:var(--muted);}
+    /* Tooltip / preview panel that appears on focus/hover */
+    .meta-preview{
+      position:relative;
+    }
+    .meta-popup{
+      position:absolute;
+      left:0;
+      top:calc(100% + 8px);
+      min-width:260px;
+      padding:10px;
+      border-radius:8px;
+      background:#fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.12);
+      border:1px solid #e6e9ef;
+      display:none;
+      z-index:40;
+    }
+    .meta-popup[aria-hidden="false"]{display:block;}
+    .meta-row{font-size:.9rem; color:var(--muted); line-height:1.3;}
+    /* keyboard focus visible */
+    .focusable:focus{outline:none; box-shadow:var(--focus-outline); border-radius:6px;}
+    /* small helper */
+    .muted{color:var(--muted); font-size:.88rem;}
+    .note{font-size:.85rem; color:var(--muted); margin-top:8px;}
+  </style>
+</head>
+<body>
+  <h1>Checklist de Acessibilidade — por Área</h1>
+  <p class="muted">Fonte: Checklist IHC (arquivo enviado). Itens com critério de alto nível mostram <strong>Não Aplicável</strong>.</p>
+
+  <div class="grid">
+    <!-- Gestão de projetos -->
+    <section class="card" aria-labelledby="gproj">
+      <h2 id="gproj">Gestão de projetos</h2>
+      <ul class="list" id="list-gestao"></ul>
+    </section>
+
+    <!-- Desenvolvimento -->
+    <section class="card" aria-labelledby="dev">
+      <h2 id="dev">Desenvolvimento</h2>
+      <ul class="list" id="list-desenvolvimento"></ul>
+    </section>
+
+    <!-- Design -->
+    <section class="card" aria-labelledby="design">
+      <h2 id="design">Design</h2>
+      <ul class="list" id="list-design"></ul>
+    </section>
+
+    <!-- Conteúdo -->
+    <section class="card" aria-labelledby="conteudo">
+      <h2 id="conteudo">Conteúdo</h2>
+      <ul class="list" id="list-conteudo"></ul>
+    </section>
+  </div>
+
+  <p class="note">Cada item tem checkbox; foque (Tab) no título do critério para ver o NBR/WCAG e a descrição simples.</p>
+</body>
+</html>

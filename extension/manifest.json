@@ -23,7 +23,8 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "images/*"
+        "images/*",
+        "partials/*.html"
       ],
       "matches": ["<all_urls>"]
     }

@@ -7,15 +7,25 @@
         body { font-family: Arial, sans-serif; width: 350px; padding: 10px; }
         button { padding: 6px 10px; margin-bottom: 8px; }
         .violation { border: 1px solid #e33; padding: 6px; margin-top: 6px; border-radius: 4px; }
+        nav {display: flex; flex-direction: row;}
+        #wrapper {display: flex; flex-direction: row;}
       </style>
+      <script src="jquery-3.7.1.min.js"></script>
     </head>
     <body>
       <h3>Verificador de Acessibilidade</h3>
+      <nav>
+        <button id="projeto">Níveis de projeto</button>
+        <button id="guia">Critérios de alto nível</button>
+      </nav>
       <button id="runBtn">Rodar verificação</button>
       <button id="clearBtn">Limpar marcações</button>
       <div id="status"></div>
-      <div id="results"></div>
-    
+      <div id="wrapper">
+        <div id="checklist"></div>
+        <div id="results"></div>  
+      </div>
       <script src="popup.js"></script>
+      <script src="populateChecklist.js"></script>
     </body>
 </html>
