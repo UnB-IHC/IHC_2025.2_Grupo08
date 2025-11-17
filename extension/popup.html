@@ -8,7 +8,19 @@
         button { padding: 6px 10px; margin-bottom: 8px; }
         .violation { border: 1px solid #e33; padding: 6px; margin-top: 6px; border-radius: 4px; }
         nav {display: flex; flex-direction: row;}
-        #wrapper {display: flex; flex-direction: row;}
+        #wrapper {display: flex; flex-direction: column;}
+
+        #filter-container {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        #filter-container select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
       </style>
       <script src="jquery-3.7.1.min.js"></script>
     </head>
@@ -18,8 +30,33 @@
         <button id="projeto">Níveis de projeto</button>
         <button id="guia">Critérios de alto nível</button>
       </nav>
+
       <button id="runBtn">Rodar verificação</button>
       <button id="clearBtn">Limpar marcações</button>
+
+      
+      <div id="filter-container">
+        <label for="categoryFilter"><strong>Filtrar por categoria:</strong></label>
+        <select id="categoryFilter">
+            <option value="all">Todos</option>
+            <option value="Teclado">Teclado</option>
+            <option value="Foco">Foco</option>
+            <option value="Cabeçalhos">Cabeçalhos</option>
+            <option value="Links">Links</option>
+            <option value="Imagens">Imagens</option>
+            <option value="Formulários">Formulários</option>
+            <option value="Estrutura Semântica">Estrutura Semântica</option>
+            <option value="Títulos e Rótulos">Títulos e Rótulos</option>
+            <option value="Contraste">Contraste</option>
+            <option value="Multimídia">Multimídia</option>
+            <option value="Navegação">Navegação</option>
+            <option value="Responsividade">Responsividade</option>
+            <option value="ARIA">ARIA</option>
+            <option value="Animações">Animações</option>
+            <option value="Outros">Outros</option>
+        </select>
+      </div>
+
       <div id="status"></div>
       <div id="wrapper">
         <div id="checklist"></div>

@@ -8,18 +8,18 @@
     "default_popup": "popup.html"
   },
   "content_scripts": [
-  {
-    "matches": ["<all_urls>"],
-    "js": [
-      "content/axe.min.js",
-      "content/axe.config.js",
-      "content/pt_BR.js",
-      "content/translator.js",
-      "content/content.js"
-    ],
-    "run_at": "document_idle"
-  }
-],
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "content/axe.min.js",
+        "content/axe.config.js",
+        "content/pt_BR.js",
+        "content/translator.js",
+        "content/content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
   "web_accessible_resources": [
     {
       "resources": [
