@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -469,6 +469,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conhecimento-e-principios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conhecimento e Princípios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#foco-navegacao-e-teclado" class="md-nav__link">
     <span class="md-ellipsis">
       Foco, Navegação e Teclado
@@ -523,18 +532,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#idioma-zoom-e-leitura" class="md-nav__link">
+  <a href="#idioma-e-zoom" class="md-nav__link">
     <span class="md-ellipsis">
-      Idioma, Zoom e Leitura
+      Idioma e Zoom
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multimidia" class="md-nav__link">
+  <a href="#multimidia-e-feedback" class="md-nav__link">
     <span class="md-ellipsis">
-      Multimídia
+      Multimídia e Feedback
     </span>
   </a>
   
@@ -550,9 +559,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#heuristicas-e-recomendacoes" class="md-nav__link">
+  <a href="#recomendacoes" class="md-nav__link">
     <span class="md-ellipsis">
-      Heurísticas e Recomendações
+      Recomendações
     </span>
   </a>
   
@@ -669,6 +678,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#conhecimento-e-principios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conhecimento e Princípios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#foco-navegacao-e-teclado" class="md-nav__link">
     <span class="md-ellipsis">
       Foco, Navegação e Teclado
@@ -723,18 +741,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#idioma-zoom-e-leitura" class="md-nav__link">
+  <a href="#idioma-e-zoom" class="md-nav__link">
     <span class="md-ellipsis">
-      Idioma, Zoom e Leitura
+      Idioma e Zoom
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multimidia" class="md-nav__link">
+  <a href="#multimidia-e-feedback" class="md-nav__link">
     <span class="md-ellipsis">
-      Multimídia
+      Multimídia e Feedback
     </span>
   </a>
   
@@ -750,9 +768,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#heuristicas-e-recomendacoes" class="md-nav__link">
+  <a href="#recomendacoes" class="md-nav__link">
     <span class="md-ellipsis">
-      Heurísticas e Recomendações
+      Recomendações
     </span>
   </a>
   
@@ -775,160 +793,74 @@
 
 
 <h1 id="checklist-de-desenvovlimento">Checklist de Desenvovlimento</h1>
-<h2 id="foco-navegacao-e-teclado">Foco, Navegação e Teclado</h2>
+<h3 id="conhecimento-e-principios">Conhecimento e Princípios</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Garantir navegação por teclado</strong> em todos os elementos interativos.<br />
-<code>WCAG 2.1.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard">(1)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Evitar armadilhas de foco</strong>, permitindo sair de qualquer elemento usando Tab.<br />
-<code>WCAG 2.1.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap">(2)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Manter ordem de foco previsível</strong> e lógica.<br />
-<code>WCAG 2.4.3 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order">(3)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Exibir ou ocultar conteúdo extra no foco</strong> conforme as regras de acessibilidade.<br />
-<code>WCAG 1.4.13 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus">(4)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Oferecer instruções para componentes customizados</strong>.<br />
-<code>WCAG 3.3.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions">(5)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que a equipe de desenvolvimento conheça as diretrizes WCAG</strong>, especialmente os níveis A e AA. <code>Guia-UK</code> <a href="#">(13)</a></li>
 </ul>
-<hr />
-<h2 id="tabelas">Tabelas</h2>
+<h3 id="foco-navegacao-e-teclado">Foco, Navegação e Teclado</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Usar <code>&lt;th&gt;</code></strong> para cabeçalhos de tabela.<br />
-<code>WCAG 1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(6)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Evitar tabelas para layout</strong>.<br />
-<code>WCAG 1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(7)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Incluir descrição</strong> em tabelas complexas.<br />
-<code>WCAG 3.1.5 (AAA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose">(8)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir navegação por teclado</strong> em todos os elementos interativos, utilizando Tab, Shift+Tab, Enter, Espaço e Teclas de Seta.   <code>5.1.5/2.1.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard">(14)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Evitar armadilhas de foco</strong>, permitindo que o usuário saia de qualquer elemento (pop-ups ou menus) usando a tecla Tab.   <code>5.1.6/2.1.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap">(15)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Manter ordem de foco previsível e lógica</strong>, permitindo navegação intuitiva e sequencial entre os elementos a focar.   <code>5.4.1/2.4.3 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/focus-order">(16)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Controlar a exibição ou ocultação de conteúdo extra no foco</strong>, garantindo que o conteúdo seja dispensável ou só seja dispensado após o elemento perder foco.   <code>5.1.8, 5.1.9/1.4.13 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/content-on-hover-or-focus">(17)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Oferecer instruções para componentes customizados</strong>, especialmente aqueles com comportamentos complexos ou não previsíveis, para a correta operação.   <code>5.1.16/3.3.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions">(18)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que a ordem de leitura do leitor de tela siga a ordem lógica e previsível da tela</strong>, respeitando o fluxo visual (cima/baixo, esq/dir).   <code>1.3.2/1.3.2 (A)</code> <a href="#">(19)</a></li>
 </ul>
-<hr />
-<h2 id="formularios">Formulários</h2>
+<h3 id="tabelas">Tabelas</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Garantir <code>&lt;label&gt;</code> para todos os campos</strong>.<br />
-<code>WCAG 3.3.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions">(9)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Evitar pedir informações repetidas</strong>.<br />
-<code>WCAG 3.3.7 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">(10)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Permitir reverter formulários críticos</strong>.<br />
-<code>WCAG 3.3.4 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data">(11)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Oferecer alternativa a validação por percepção ou movimento</strong>.<br />
-<code>WCAG 2.5.4 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation">(12)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Usar a tag <code>&lt;th&gt;</code> (table header)</strong> para marcar os títulos de colunas e/ou linhas, permitindo que leitores de tela associem os dados corretamente.   <code>5.6.3/1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(20)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Evitar tabelas para layout</strong>, usando-as apenas para exibir dados e não para organizar o layout visual da página.   <code>5.6.2/1.3.1 (A)</code> <a href="#">(21)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Marcar tabelas de dados</strong> no código com a tag <code>&lt;table&gt;</code>.   <code>5.6.1/1.3.1 (A)</code> <a href="#">(22)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Incluir descrição em texto</strong> em todas as tabelas complexas.   <code>5.6.6/3.1.5 (AAA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose">(23)</a></li>
 </ul>
-<hr />
-<h2 id="regioes">Regiões</h2>
+<h3 id="formularios">Formulários</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Usar <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> e landmarks corretos</strong>.<br />
-<code>WCAG 1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(13)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Adicionar “Pular para o conteúdo”</strong>.<br />
-<code>WCAG 2.4.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks">(14)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Identificar regiões com nomes únicos</strong>.<br />
-<code>WCAG 4.1.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value">(15)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir a tag <code>&lt;label&gt;</code> para todos os campos do formulário</strong>, fornecendo um rótulo visível que indica o que deve ser preenchido.   <code>5.9.1/3.3.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions">(24)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Evitar pedir informações repetidas</strong> no formulário que o usuário já forneceu nesta mesma sessão.   <code>5.9.15/3.3.7 (A) ITRAC</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">(25)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Permitir reverter formulários críticos</strong> (como aqueles envolvendo dados legais ou financeiros).   <code>5.9.12/3.3.4 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/error-prevention-legal-financial-data">(26)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Oferecer alternativa a formulários que exijam percepção ou capacidade motora</strong> (como gestos ou movimentos).   <code>5.9.16/1.1.1 (A), 2.5.4 (A), 2.5.6(AAA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation">(27)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Oferecer bons valores padrão (default)</strong> no sistema para minimizar a chance de erro no preenchimento do usuário.   <code>H5</code> <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">(28)</a></li>
 </ul>
-<hr />
-<h2 id="listas-e-links">Listas e Links</h2>
+<h3 id="regioes">Regiões</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Usar <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> e <code>&lt;li&gt;</code> corretamente</strong>.<br />
-<code>WCAG 1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(16)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Links devem ser claros e semânticos</strong> usando <code>&lt;a&gt;</code>.<br />
-<code>WCAG 2.4.4 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context">(17)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Pelo menos duas formas de navegar pelo conteúdo</strong>.<br />
-<code>WCAG 2.4.5 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways">(18)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Usar as tags <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> e landmarks corretos</strong> para identificar as áreas principais da página (cabeçalho, menu, rodapé, etc.).   <code>5.4.1/1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(29)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Adicionar um link "Pular para o conteúdo"</strong> (ou "Ignorar repetição") no topo da página, que apareça ao começar a navegar com a tecla Tab.   <code>5.4.2/1.3.1 (A), 1.3.6 (AAA) ITRAC</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks">(30)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Identificar todas as regiões do mesmo tipo com nomes únicos</strong> e acessíveis.   <code>5.4.5/4.1.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value">(31)</a></li>
 </ul>
-<hr />
-<h2 id="botoes-e-controles">Botões e Controles</h2>
+<h3 id="listas-e-links">Listas e Links</h3>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <strong>Usar <code>&lt;button&gt;</code> ou <code>role="button"</code> em elementos interativos</strong>.<br />
-<code>WCAG 4.1.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value">(19)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Usar as tags <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code> e <code>&lt;li&gt;</code> corretamente</strong> para agrupar itens semelhantes no código.   <code>5.5.1/1.3.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships">(32)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que o código de lista seja usado semanticamente</strong> para agrupar itens semelhantes, e não apenas para obter um efeito visual.   <code>5.5.2/1.3.1 (A)</code> <a href="#">(33)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que links sejam claros e semânticos</strong>, utilizando a tag <code>&lt;a&gt;</code> com <code>href</code> para o texto que leva a outra página ou recurso.   <code>5.7.1/1.3.1 (A)</code> <a href="#">(34)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Oferecer pelo menos duas formas de navegar pelo conteúdo</strong> (Ex: menu principal e mapa do site, ou menu e busca).   <code>5.7.13/2.4.5 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways">(35)</a></li>
 </ul>
-<hr />
-<h2 id="idioma-zoom-e-leitura">Idioma, Zoom e Leitura</h2>
+<h3 id="botoes-e-controles">Botões e Controles</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Definir o idioma da página com <code>lang="pt-BR"</code></strong>.<br />
-<code>WCAG 3.1.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page">(20)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Permitir zoom sem bloqueio</strong>.<br />
-<code>WCAG 1.4.4 (AA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/resize-text">(21)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Ordem de leitura lógica no HTML</strong>.<br />
-<code>WCAG 1.3.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence">(22)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Usar a tag <code>&lt;button&gt;</code> ou <code>role="button"</code></strong> em elementos que executam uma ação na página (como "Enviar", "Buscar", "Fechar").   <code>5.8.1/1.3.1 (A)</code> <a href="#">(36)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que o texto acessível do botão corresponda ao texto visível</strong> (Ex: se o botão diz "Ver Carrinho", o leitor de tela deve ler "Ver Carrinho").   <code>5.13.7/2.5.3 (A)</code> <a href="#">(37)</a></li>
 </ul>
-<hr />
-<h2 id="multimidia">Multimídia</h2>
+<h3 id="idioma-e-zoom">Idioma e Zoom</h3>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox"/> <strong>Controle para pausar áudio/vídeo automático</strong>.<br />
-<code>WCAG 1.4.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-control">(23)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Definir o idioma principal da página com o atributo <code>lang="pt-BR"</code></strong>, para que os leitores de tela usem a pronúncia correta.   <code>5.13.2/3.1.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page">(38)</a></li>
 </ul>
-<hr />
-<h2 id="movimento-tempo-e-gestos">Movimento, Tempo e Gestos</h2>
+<h3 id="multimidia-e-feedback">Multimídia e Feedback</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Permitir desativar animações de rolagem</strong>.<br />
-<code>WCAG 2.3.3 (AAA)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions">(24)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Permitir estender tempo de sessão</strong>.<br />
-<code>WCAG 2.2.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable">(25)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Botão para pausar animações automáticas</strong>.<br />
-<code>WCAG 2.2.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide">(26)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Gestos complexos possuem alternativa simples</strong>.<br />
-<code>WCAG 2.5.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation">(27)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Fornecer controle para pausar, parar ou silenciar áudio/vídeo automático</strong>, caso comece a tocar sozinho por mais de 3 segundos.   <code>5.14.7/1.4.2 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-control">(39)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que o leitor de tela avise o usuário sobre mudanças automáticas na página</strong> (Ex: "Item adicionado ao carrinho"), sem que o usuário perca o foco.   <code>5.13.8/4.1.3 (AA)</code> <a href="#">(40)</a></li>
 </ul>
-<hr />
-<h2 id="heuristicas-e-recomendacoes">Heurísticas e Recomendações</h2>
+<h3 id="movimento-tempo-e-gestos">Movimento, Tempo e Gestos</h3>
 <ul class="task-list">
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>O sistema oferece valores padrão adequados</strong>.<br />
-  Heurística 5 <a href="https://www.nngroup.com/articles/ten-usability-heuristics/">(28)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Captchas têm alternativas acessíveis (áudio, texto etc.)</strong>.<br />
-  Guia-UK <a href="#">(29)</a></p>
-</li>
-<li class="task-list-item">
-<p><input type="checkbox"/> <strong>Evitar plugins que prometem acessibilidade automática</strong>.<br />
-  Guia-UK <a href="#">(30)</a></p>
-</li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Permitir desativar animações de rolagem (scroll)</strong>, caso haja movimentos que disparem ao rolar a página.   <code>5.15.2/2.3.3 (AAA) ITRAC</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions">(41)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Permitir estender o tempo de sessão</strong>, caso haja um limite de tempo na página, com aviso prévio do sistema.   <code>5.16.2/2.2.1 (A)</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable">(42)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Fornecer um botão visível para pausar ou parar animações automáticas</strong> (como carrosséis ou movimentos).   <code>5.15.1/2.2.2 (A) ITRAC</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide">(43)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que gestos complexos possuam alternativa simples</strong>, como pedir confirmação ou permitir desfazer a ação.   <code>5.8.11/2.5.2 (A) ITRAC</code> <a href="https://www.w3.org/WAI/WCAG22/Understanding/pointer-cancellation">(44)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Evitar que componentes sejam acionados apenas por foco de cursor</strong> (ao passar o mouse), necessitando de uma ação como clique.   <code>5.8.9/3.2.1 (AA)</code> <a href="#">(45)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Evitar Mudança de Contexto Inesperada</strong>, garantindo que o site não mude de lugar ou abra pop-ups sozinho ao focar ou preencher um campo.   <code>5.8.9/3.2.2 (AA) ITRAC</code> <a href="#">(46)</a></li>
+</ul>
+<h3 id="recomendacoes">Recomendações</h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox"/> <strong>Garantir que Captchas tenham alternativas acessíveis</strong>, como desafios de áudio ou outras formas de verificação.   <code>Guia-UK</code> <a href="#">(47)</a></li>
+<li class="task-list-item"><input type="checkbox"/> <strong>Evitar o uso de plugins que prometem acessibilidade automática</strong>, priorizando um código bem escrito que respeite os padrões.   <code>Guia-UK</code> <a href="#">(48)</a></li>
 </ul>
 
 
@@ -1026,10 +958,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
