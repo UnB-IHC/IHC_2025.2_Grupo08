@@ -22,6 +22,10 @@ document.getElementById("runBtn").addEventListener("click", async () => {
   resultsDiv.innerHTML = "";
   status.textContent = "Verificando...";
 
+  // Pega o filtro selecionado
+  const selectedFilter = document.getElementById('categoryFilter').value;
+  console.log("[popup.js] Tab info:", tab);
+
   // Verifica se tab existe
   if (!tab) {
     status.textContent = "Erro: Nenhuma aba ativa encontrada.";
@@ -29,12 +33,26 @@ document.getElementById("runBtn").addEventListener("click", async () => {
     return;
   }
 
+  // Valida protocolo da aba (não funciona em chrome://, about:, etc)
+  if (!tab.url || !tab.url.startsWith('http')) {
+    status.textContent = "Erro: Content script não pode rodar nesta página (protegida pelo navegador).";
+    console.error('[popup.js] URL protegida:', tab.url);
+    return;
+  }
+
+  console.log("[popup.js] Enviando mensagem para tab:", tab.id, "Filtro:", selectedFilter);
+
   try {
-    chrome.tabs.sendMessage(tab.id, { type: "RUN_AXE" }, (response) => {
+    // Envia o filtro selecionado junto com a mensagem
+    chrome.tabs.sendMessage(tab.id, { type: "RUN_AXE", filter: selectedFilter }, (response) => {
+      console.log("[popup.js] Resposta recebida:", response);
+      
       // Verifica erro de comunicação
       if (chrome.runtime.lastError) {
-        console.error("[popup.js] Erro de comunicação:", chrome.runtime.lastError);
-        status.textContent = "Erro: " + chrome.runtime.lastError.message;
+        const errorMsg = chrome.runtime.lastError.message || JSON.stringify(chrome.runtime.lastError);
+        console.error("[popup.js] Erro de comunicação:", errorMsg);
+        console.error("[popup.js] Detalhes do erro:", chrome.runtime.lastError);
+        status.textContent = "Erro: " + errorMsg;
         return;
       }
 
@@ -58,11 +76,11 @@ document.getElementById("runBtn").addEventListener("click", async () => {
       }
 
       if (!results.violations.length) {
-        status.textContent = "Nenhum problema encontrado 🎉";
+        status.textContent = `Nenhum problema encontrado em "${selectedFilter}" 🎉`;
         return;
       }
 
-      status.textContent = `${results.violations.length} problemas encontrados:`;
+      status.textContent = `${results.violations.length} problemas encontrados em "${selectedFilter}":`;
       results.violations.forEach((v) => {
         const div = document.createElement("div");
         div.className = "violation";

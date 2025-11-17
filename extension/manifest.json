@@ -3,7 +3,7 @@
   "name": "Verificador de acessibilidade",
   "version": "0.1",
   "description": "Verifica critérios de acessibilidade no site atual.",
-  "permissions": ["activeTab", "scripting", "storage"],
+  "permissions": ["activeTab", "scripting", "storage", "tabs"],
   "action": {
     "default_popup": "popup.html"
   },
