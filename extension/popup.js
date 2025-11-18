@@ -21,7 +21,7 @@ document.getElementById("runBtn").addEventListener("click", async () => {
       const div = document.createElement("div");
       div.className = "violation";
       div.innerHTML = `<strong>${v.id}</strong>: ${v.help}
-      <br><a href="${v.helpUrl}" target="_blank">Saiba mais</a>`;
+      <br>${v.nodes.length} afetados<br><a href="${v.helpUrl}" target="_blank">Saiba mais</a>`;
       resultsDiv.appendChild(div);
     });
   });
@@ -48,9 +48,5 @@ $(function(){
           document.getElementById("projeto").addEventListener("click", () => {
             $("#checklist").load("partials/projectChecklist.html"); 
           });
-          document.getElementById("guia").addEventListener("click", () => {
-            $("#checklist").load("partials/projectChecklist.html"); 
-          });
-
         });
 
