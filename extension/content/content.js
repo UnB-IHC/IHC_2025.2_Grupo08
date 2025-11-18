@@ -35,15 +35,17 @@
                   icon.style.position = "absolute";
                   icon.style.top = "-12px";
                   icon.style.right = "-12px";
-                  icon.style.zIndex = "999999";
+                  icon.style.zIndex = "999998";
                   icon.style.cursor = "pointer";
-                  icon.title = n.failureSummary;
+                  icon.style.pointerEvents = "auto";
+                  icon.title = v.help;
+                  
 
                   // Tooltip customizado (ao passar o mouse)
-                  icon.addEventListener("mouseenter", () => {
+                  icon.addEventListener("mouseenter", (event) => {
                     const tooltip = document.createElement("div");
                     tooltip.className = "marker-tooltip";
-                    tooltip.textContent = n.failureSummary;
+                    tooltip.textContent = v.help
                     tooltip.style.position = "fixed";
                     tooltip.style.background = "#fff";
                     tooltip.style.border = "1px solid #e33";
@@ -57,6 +59,22 @@
                     tooltip.style.fontSize = "13px";
                     tooltip.style.color = "#000";
                     document.body.appendChild(tooltip);
+
+                    let top = event.clientY + 15;
+                    let left = event.clientX + 15;
+                                  
+                    // Se vai sair à direita, coloca à esquerda do mouse
+                    if (left + 250 > window.innerWidth) {
+                        left = event.clientX - 250 - 15;
+                    }
+                  
+                    // Se vai sair embaixo, coloca acima do mouse
+                    if (top + 100 > window.innerHeight) {
+                        top = event.clientY - 100 - 15;
+                    }
+                  
+                    tooltip.style.top = Math.max(10, top) + "px";
+                    tooltip.style.left = Math.max(10, left) + "px";
 
                     icon.addEventListener("mouseleave", () => {
                       tooltip.remove();
