@@ -6,8 +6,8 @@ const ptBRrules = {
       "help": "O valor do atributo 'accesskey' deve ser único"
     },
     "area-alt": {
-      "description": "Certifique-se de que elementos <area> de mapas de imagem tenham um texto alternativo",
-      "help": "Elementos <area> ativos devem ter um texto alternativo"
+      "description": "Certifique-se de que elementos &lt;area&gt; de mapas de imagem tenham um texto alternativo",
+      "help": "Elementos &lt;area&gt; ativos devem ter um texto alternativo"
     },
     "aria-allowed-attr": {
       "description": "Certifique-se de que os atributos ARIA são permitidos para a função de um elemento",
@@ -26,8 +26,8 @@ const ptBRrules = {
       "help": "Nós de diálogo e diálogo de alerta ARIA devem ter um nome acessível"
     },
     "aria-hidden-body": {
-      "description": "Certifique-se de que aria-hidden='true' não está presente no elemento <body>.",
-      "help": "aria-hidden='true' não deve estar presente no elemento <body>"
+      "description": "Certifique-se de que aria-hidden='true' não está presente no elemento &lt;body&gt;.",
+      "help": "aria-hidden='true' não deve estar presente no elemento &lt;body&gt;"
     },
     "aria-hidden-focus": {
       "description": "Certifique-se de que elementos com aria-hidden não contenham elementos focalizáveis",
@@ -90,8 +90,8 @@ const ptBRrules = {
       "help": "Atributos ARIA devem ter nomes válidos"
     },
     "audio-caption": {
-      "description": "Certifique-se de que elementos <audio> tenham legendas",
-      "help": "Elementos <audio> devem ter uma trilha de legenda"
+      "description": "Certifique-se de que elementos &lt;audio&gt; tenham legendas",
+      "help": "Elementos &lt;audio&gt; devem ter uma trilha de legenda"
     },
     "autocomplete-valid": {
       "description": "Certifique-se de que o atributo 'autocomplete' esteja correto e adequado para o campo de formulário",
@@ -102,8 +102,8 @@ const ptBRrules = {
       "help": "O espaçamento de texto 'inline' deve ser ajustável com folhas de estilo personalizadas"
     },
     "blink": {
-      "description": "Certifique-se de que elementos <blink> não são utilizados",
-      "help": "Elementos <blink> foram descontinuados e não devem ser utilizados"
+      "description": "Certifique-se de que elementos &lt;blink&gt; não são utilizados",
+      "help": "Elementos &lt;blink&gt; foram descontinuados e não devem ser utilizados"
     },
     "button-name": {
       "description": "Certifique-se de que botões tenham texto discernível",
@@ -126,16 +126,16 @@ const ptBRrules = {
       "help": "CSS Media queries não são usadas para bloquear a orientação de tela"
     },
     "definition-list": {
-      "description": "Certifique-se de que elementos <dl> estão estruturados corretamente",
-      "help": "Elementos <dl> devem conter diretamente apenas grupos <dt> e <dd> propriamente ordenados, ou elementos <script> ou <template>"
+      "description": "Certifique-se de que elementos &lt;dl&gt; estão estruturados corretamente",
+      "help": "Elementos &lt;dl&gt; devem conter diretamente apenas grupos &lt;dt&gt; e &lt;dd&gt; propriamente ordenados, ou elementos &lt;script&gt; ou &lt;template&gt;"
     },
     "dlitem": {
-      "description": "Certifique-se de que elementos <dt> e <dd> estão contidos em um elemento <dl>",
-      "help": "Elementos <dt> e <dd> devem estar contidos em um elemento <dl>"
+      "description": "Certifique-se de que elementos &lt;dt&gt; e &lt;dd&gt; estão contidos em um elemento &lt;dl&gt;",
+      "help": "Elementos &lt;dt&gt; e &lt;dd&gt; devem estar contidos em um elemento &lt;dl&gt;"
     },
     "document-title": {
-      "description": "Certifique-se de que cada documento HTML contenha um elemento <title> não vazio",
-      "help": "Documentos devem ter um elemento <title> para ajudar na navegação"
+      "description": "Certifique-se de que cada documento HTML contenha um elemento &lt;title&gt; não vazio",
+      "help": "Documentos devem ter um elemento &lt;title&gt; para ajudar na navegação"
     },
     "duplicate-id-active": {
       "description": "Certifique-se de que cada valor do atributo 'id' de elementos ativos seja único",
@@ -166,19 +166,19 @@ const ptBRrules = {
       "help": "Campos de formulário não devem ter múltiplos elementos 'label'"
     },
     "frame-focusable-content": {
-      "description": "Certifique-se de que elementos <frame> e <iframe> com tabindex=-1 não tenham conteúdo focalizável",
+      "description": "Certifique-se de que elementos &lt;frame&gt; e &lt;iframe&gt; com tabindex=-1 não tenham conteúdo focalizável",
       "help": "Quadros com tabindex=-1 não devem ter conteúdo focalizável"
     },
     "frame-tested": {
-      "description": "Certifique-se de que elementos <iframe> e <frame> contenham o script axe-core",
+      "description": "Certifique-se de que elementos &lt;iframe&gt; e &lt;frame&gt; contenham o script axe-core",
       "help": "Os 'frames' devem ser testados com o axe-core"
     },
     "frame-title-unique": {
-      "description": "Certifique-se de que os elementos <iframe> e <frame> contenham um atributo 'title' único",
+      "description": "Certifique-se de que os elementos &lt;iframe&gt; e &lt;frame&gt; contenham um atributo 'title' único",
       "help": "Os 'frames' devem ter um atributo 'title' único"
     },
     "frame-title": {
-      "description": "Certifique-se de que os elementos <iframe> e <frame> contenham um atributo 'title' não vazio",
+      "description": "Certifique-se de que os elementos &lt;iframe&gt; e &lt;frame&gt; contenham um atributo 'title' não vazio",
       "help": "Os 'frames' devem ter um atributo 'title'"
     },
     "heading-order": {
@@ -191,11 +191,11 @@ const ptBRrules = {
     },
     "html-has-lang": {
       "description": "Certifique-se de que cada documento HTML tenha um atributo 'lang'",
-      "help": "O elemento <html> deve ter um atributo 'lang'"
+      "help": "O elemento &lt;html&gt; deve ter um atributo 'lang'"
     },
     "html-lang-valid": {
-      "description": "Certifique-se de que o atributo 'lang' do elemento <html> tenha um valor válido",
-      "help": "O elemento <html> deve ter um valor válido para o atributo 'lang'"
+      "description": "Certifique-se de que o atributo 'lang' do elemento &lt;html&gt; tenha um valor válido",
+      "help": "O elemento &lt;html&gt; deve ter um valor válido para o atributo 'lang'"
     },
     "html-xml-lang-mismatch": {
       "description": "Certifique-se de que elementos HTML com ambos os atributos 'lang' e 'xml:lang' válidos concordem entre si sobre o idioma base da página",
@@ -206,7 +206,7 @@ const ptBRrules = {
       "help": "Links com o mesmo nome devem ter um propósito similar"
     },
     "image-alt": {
-      "description": "Certifique-se de que elementos <img> tenham texto alternativo ou um 'role' igual a 'none' ou 'presentation'",
+      "description": "Certifique-se de que elementos &lt;img&gt; tenham texto alternativo ou um 'role' igual a 'none' ou 'presentation'",
       "help": "Imagens devem ter texto alternativo"
     },
     "image-redundant-alt": {
@@ -218,7 +218,7 @@ const ptBRrules = {
       "help": "Botões de controle devem ter um texto discernível"
     },
     "input-image-alt": {
-      "description": "Certifique-se de que elementos <input type=\"image\"> tenham um texto alternativo",
+      "description": "Certifique-se de que elementos &lt;input type=\"image\"&gt; tenham um texto alternativo",
       "help": "Botões de imagem devem ter um texto alternativo"
     },
     "label-content-name-mismatch": {
@@ -279,26 +279,26 @@ const ptBRrules = {
     },
     "list": {
       "description": "Certifique-se de que listas sejam estruturadas corretamente",
-      "help": "Elementos <ul> e <ol> devem conter diretamente apenas elementos <li>, <script> ou <template>"
+      "help": "Elementos &lt;ul&gt; e &lt;ol&gt; devem conter diretamente apenas elementos &lt;li&gt;, &lt;script&gt; ou &lt;template&gt;"
     },
     "listitem": {
-      "description": "Certifique-se de que elementos <li> são usados semanticamente",
-      "help": "Elementos <li> devem estar contidos em um <ul> ou <ol>"
+      "description": "Certifique-se de que elementos &lt;li&gt; são usados semanticamente",
+      "help": "Elementos &lt;li&gt; devem estar contidos em um &lt;ul&gt; ou &lt;ol&gt;"
     },
     "marquee": {
-      "description": "Certifique-se de que elementos <marquee> não são utilizados",
-      "help": "Elementos <marquee> foram descontinuados e não devem ser utilizados"
+      "description": "Certifique-se de que elementos &lt;marquee&gt; não são utilizados",
+      "help": "Elementos &lt;marquee&gt; foram descontinuados e não devem ser utilizados"
     },
     "meta-refresh": {
-      "description": "Certifique-se de que <meta http-equiv=\"refresh\"> não é utilizado",
+      "description": "Certifique-se de que &lt;meta http-equiv=\"refresh\"&gt; não é utilizado",
       "help": "Atualização temporizada não deve existir"
     },
     "meta-viewport-large": {
-      "description": "Certifique-se de que <meta name=\"viewport\"> permite ampliar de maneira significativa",
+      "description": "Certifique-se de que &lt;meta name=\"viewport\"&gt; permite ampliar de maneira significativa",
       "help": "Os usuários devem poder dar zoom e ampliar o texto em até 500%"
     },
     "meta-viewport": {
-      "description": "Certifique-se de que <meta name=\"viewport\"> não desabilite a ampliação de texto e o zoom",
+      "description": "Certifique-se de que &lt;meta name=\"viewport\"&gt; não desabilite a ampliação de texto e o zoom",
       "help": "O zoom e a ampliação de texto não devem ser desabilitados"
     },
     "nested-interactive": {
@@ -306,16 +306,16 @@ const ptBRrules = {
       "help": "Certifique-se de que controles interativos não estejam aninhados"
     },
     "no-autoplay-audio": {
-      "description": "Certifique-se de que elementos <video> ou <audio> não reproduzam áudio automaticamente por mais de 3 segundos sem um mecanismo de controle para parar ou silenciar o áudio",
-      "help": "Elementos <video> ou <audio> não reproduzam áudio automaticamente"
+      "description": "Certifique-se de que elementos &lt;video&gt; ou &lt;audio&gt; não reproduzam áudio automaticamente por mais de 3 segundos sem um mecanismo de controle para parar ou silenciar o áudio",
+      "help": "Elementos &lt;video&gt; ou &lt;audio&gt; não reproduzam áudio automaticamente"
     },
     "object-alt": {
-      "description": "Certifique-se de que elementos <object> tenham um texto alternativo",
-      "help": "Elementos <object> devem ter um texto alternativo"
+      "description": "Certifique-se de que elementos &lt;object&gt; tenham um texto alternativo",
+      "help": "Elementos &lt;object&gt; devem ter um texto alternativo"
     },
     "p-as-heading": {
-      "description": "Certifique-se de que elementos <p> não sejam utilizados para estilizar títulos",
-      "help": "Negrito, itálico e 'font-size' não sejam utilizados para estilizar elementos <p> como um título"
+      "description": "Certifique-se de que elementos &lt;p&gt; não sejam utilizados para estilizar títulos",
+      "help": "Negrito, itálico e 'font-size' não sejam utilizados para estilizar elementos &lt;p&gt; como um título"
     },
     "page-has-heading-one": {
       "description": "Certifique-se de que a página, ou pelo menos um dos seus 'frames', contenha um título de primeiro nível",
@@ -362,11 +362,11 @@ const ptBRrules = {
       "help": "Elementos não devem ter um 'tabindex' maior do que zero"
     },
     "table-duplicate-name": {
-      "description": "Certifique-se de que tabelas não tenham 'summary' e <caption> iguais",
-      "help": "O elemento <caption> não deve conter o mesmo texto que o atributo 'summary'"
+      "description": "Certifique-se de que tabelas não tenham 'summary' e &lt;caption&gt; iguais",
+      "help": "O elemento &lt;caption&gt; não deve conter o mesmo texto que o atributo 'summary'"
     },
     "table-fake-caption": {
-      "description": "Certifique-se de que tabelas com uma legenda usem o elemento <caption>.",
+      "description": "Certifique-se de que tabelas com uma legenda usem o elemento &lt;caption&gt;.",
       "help": "Células de dados ou cabeçalhos não devem ser usadas para exibir uma legenda para uma tabela de dados."
     },
     "td-has-header": {
@@ -386,8 +386,8 @@ const ptBRrules = {
       "help": "O atributo 'lang' deve ter um valor válido"
     },
     "video-caption": {
-      "description": "Certifique-se de que elementos <video> tenham legendas",
-      "help": "Elementos <video> devem ter legendas"
+      "description": "Certifique-se de que elementos &lt;video&gt; tenham legendas",
+      "help": "Elementos &lt;video&gt; devem ter legendas"
     }
   },
   "checks": {
@@ -428,8 +428,8 @@ const ptBRrules = {
       }
     },
     "aria-hidden-body": {
-      "pass": "Nenhum atributo 'aria-hidden' está presente no elemento <body>",
-      "fail": "'aria-hidden=true' não deve estar presente no elemento <body>"
+      "pass": "Nenhum atributo 'aria-hidden' está presente no elemento &lt;body&gt;",
+      "fail": "'aria-hidden=true' não deve estar presente no elemento &lt;body&gt;"
     },
     "aria-prohibited-attr": {
       "pass": "O atributo ARIA é permitido",
@@ -520,8 +520,8 @@ const ptBRrules = {
       "fail": "O elemento não é focalizável."
     },
     "no-implicit-explicit-label": {
-      "pass": "Não há nenhuma divergência entre <label> e o nome acessível",
-      "incomplete": "Verifique se o <label> não precisa fazer parte do nome do campo ARIA ${data}"
+      "pass": "Não há nenhuma divergência entre &lt;label&gt; e o nome acessível",
+      "incomplete": "Verifique se o &lt;label&gt; não precisa fazer parte do nome do campo ARIA ${data}"
     },
     "unsupportedrole": {
       "pass": "O ARIA 'role' é suportado",
@@ -661,35 +661,35 @@ const ptBRrules = {
       "fail": "O elemento tem um atributo 'alt' contendo apenas um caracter de espaço, o que não é ignorado por todos os leitores de tela"
     },
     "duplicate-img-label": {
-      "pass": "O elemento não duplica um texto existente no atributo 'alt' do elemento <img>",
-      "fail": "O elemento contém o elemento <img> com texto alternativo duplicando um texto existente"
+      "pass": "O elemento não duplica um texto existente no atributo 'alt' do elemento &lt;img&gt;",
+      "fail": "O elemento contém o elemento &lt;img&gt; com texto alternativo duplicando um texto existente"
     },
     "explicit-label": {
-      "pass": "O elemento de formulário tem um <label> explícito",
-      "fail": "O elemento de formulário não tem um <label> explícito",
-      "incomplete": "Não foi possível determinar se o elemento de formulário tem um <label> explícito"
+      "pass": "O elemento de formulário tem um &lt;label&gt; explícito",
+      "fail": "O elemento de formulário não tem um &lt;label&gt; explícito",
+      "incomplete": "Não foi possível determinar se o elemento de formulário tem um &lt;label&gt; explícito"
     },
     "help-same-as-label": {
       "pass": "O texto de ajuda ('title' ou 'aria-describedby') não duplica o texto do rótulo",
       "fail": "O texto de ajuda ('title' ou 'aria-describedby') é o igual ao texto do rótulo"
     },
     "hidden-explicit-label": {
-      "pass": "O elemento de formulário tem um <label> explícito visível",
-      "fail": "O elemento de formulário tem um <label> explícito que está oculto",
-      "incomplete": "Não foi possível determinar se o elemento de formulário tem um <label> explícito que está oculto"
+      "pass": "O elemento de formulário tem um &lt;label&gt; explícito visível",
+      "fail": "O elemento de formulário tem um &lt;label&gt; explícito que está oculto",
+      "incomplete": "Não foi possível determinar se o elemento de formulário tem um &lt;label&gt; explícito que está oculto"
     },
     "implicit-label": {
-      "pass": "O elemento de formulário tem um <label> implícito (envolvido)",
-      "fail": "O elemento de formulário não tem <label> implícito (envolvido)",
-      "incomplete": "Não foi possível determinar se o elemento de formulário tem um <label> implícito (envolvido)"
+      "pass": "O elemento de formulário tem um &lt;label&gt; implícito (envolvido)",
+      "fail": "O elemento de formulário não tem &lt;label&gt; implícito (envolvido)",
+      "incomplete": "Não foi possível determinar se o elemento de formulário tem um &lt;label&gt; implícito (envolvido)"
     },
     "label-content-name-mismatch": {
       "pass": "O elemento contém o texto visível como parte do seu nome acessível",
       "fail": "O texto dentro do elemento não está incluído no nome acessível"
     },
     "multiple-label": {
-      "pass": "O campo de formulário não tem múltiplos elementos <label>",
-      "incomplete": "O uso de múltiplos elementos <label> não é amplamente suportado pelas tecnologias assistivas. Certifique-se de que o primeiro <label> contém toda a informação necessária."
+      "pass": "O campo de formulário não tem múltiplos elementos &lt;label&gt;",
+      "incomplete": "O uso de múltiplos elementos &lt;label&gt; não é amplamente suportado pelas tecnologias assistivas. Certifique-se de que o primeiro &lt;label&gt; contém toda a informação necessária."
     },
     "title-only": {
       "pass": "Elementos de formulário não usam somente o atributo 'title' como seu rótulo",
@@ -700,10 +700,10 @@ const ptBRrules = {
       "fail": "A região deve ter um 'aria-label', 'aria-labelledby', ou 'title' único para tornar as regiões distinguíveis"
     },
     "has-lang": {
-      "pass": "O elemento <html> tem um atributo 'lang'",
+      "pass": "O elemento &lt;html&gt; tem um atributo 'lang'",
       "fail": {
         "noXHTML": "O atributo 'xml:lang' não é válido em páginas HTML, use o atributo 'lang'.",
-        "noLang": "O elemento <html> não possui um atributo 'lang'"
+        "noLang": "O elemento &lt;html&gt; não possui um atributo 'lang'"
       }
     },
     "valid-lang": {
@@ -715,30 +715,30 @@ const ptBRrules = {
       "fail": "Os atributos 'lang' e 'xml:lang' não têm o mesmo idioma base"
     },
     "dlitem": {
-      "pass": "O item da lista de descrição tem um elemento pai <dl>",
-      "fail": "O item da lista de descrição não tem um elemente pai <dl>"
+      "pass": "O item da lista de descrição tem um elemento pai &lt;dl&gt;",
+      "fail": "O item da lista de descrição não tem um elemente pai &lt;dl&gt;"
     },
     "listitem": {
-      "pass": "O item de lista tem um elemento pai <ul>, <ol> ou role=\"list\"",
+      "pass": "O item de lista tem um elemento pai &lt;ul&gt;, &lt;ol&gt; ou role=\"list\"",
       "fail": {
-        "default": "O item de lista não tem um elemento pai <ul> ou <ol>",
-        "roleNotValid": "O item de lista não tem um elemento pai <ul> ou <ol> sem um 'role', ou um role=\"list\""
+        "default": "O item de lista não tem um elemento pai &lt;ul&gt; ou &lt;ol&gt;",
+        "roleNotValid": "O item de lista não tem um elemento pai &lt;ul&gt; ou &lt;ol&gt; sem um 'role', ou um role=\"list\""
       }
     },
     "only-dlitems": {
-      "pass": "O elemento de lista tem somente filhos diretos que são permitidos dentro de elementos <dt> ou <dd>",
-      "fail": "O elemento de lista tem filhos diretos que não são permitidos dentro de elementos <dt> ou <dd>"
+      "pass": "O elemento de lista tem somente filhos diretos que são permitidos dentro de elementos &lt;dt&gt; ou &lt;dd&gt;",
+      "fail": "O elemento de lista tem filhos diretos que não são permitidos dentro de elementos &lt;dt&gt; ou &lt;dd&gt;"
     },
     "only-listitems": {
-      "pass": "O elemento de lista tem somente filhos diretos que são permitidos dentro de elementos <li>",
+      "pass": "O elemento de lista tem somente filhos diretos que são permitidos dentro de elementos &lt;li&gt;",
       "fail": {
-        "default": "O elemento de lista tem filhos diretos que não são permitidos dentro de elementos <li>",
+        "default": "O elemento de lista tem filhos diretos que não são permitidos dentro de elementos &lt;li&gt;",
         "roleNotValid": "O elemento de lista tem filhos diretos com um 'role' que não é permitido: ${data.roles}"
       }
     },
     "structured-dlitems": {
-      "pass": "Quando não vazio, o elemento tem ambos elementos <dt> e <dd>",
-      "fail": "Quando não vazio, o elemento não tem nem ao menos um elemento <dt> seguindo de pelo menos um elemento <dd>"
+      "pass": "Quando não vazio, o elemento tem ambos elementos &lt;dt&gt; e &lt;dd&gt;",
+      "fail": "Quando não vazio, o elemento não tem nem ao menos um elemento &lt;dt&gt; seguindo de pelo menos um elemento &lt;dd&gt;"
     },
     "caption": {
       "pass": "O elemento multimídia tem uma trilha de legendas",
@@ -750,9 +750,9 @@ const ptBRrules = {
       "incomplete": "O 'iframe' ainda tem que ser testado com o 'axe-core'"
     },
     "no-autoplay-audio": {
-      "pass": "Elementos <video> ou <audio> não reproduzem áudio por mais do que a duração permitida ou possuem mecanismos de controle",
-      "fail": "Elementos <video> ou <audio> reproduzem áudio por uma duração maior que a permitida ou não possuem mecanismos de controle",
-      "incomplete": "Garanta que elementos <video> ou <audio> não reproduzam áudio por mais do que a duração permitida ou disponibilize mecanismos de controle"
+      "pass": "Elementos &lt;video&gt; ou &lt;audio&gt; não reproduzem áudio por mais do que a duração permitida ou possuem mecanismos de controle",
+      "fail": "Elementos &lt;video&gt; ou &lt;audio&gt; reproduzem áudio por uma duração maior que a permitida ou não possuem mecanismos de controle",
+      "incomplete": "Garanta que elementos &lt;video&gt; ou &lt;audio&gt; não reproduzam áudio por mais do que a duração permitida ou disponibilize mecanismos de controle"
     },
     "css-orientation-lock": {
       "pass": "A tela é operável, e o bloqueio da orientação não existe",
@@ -760,12 +760,12 @@ const ptBRrules = {
       "incomplete": "Bloqueio de orientação CSS não pode ser determinado"
     },
     "meta-viewport-large": {
-      "pass": "A tag <meta> não impede o zoom significativo em dispositivos móveis",
-      "fail": "A tag <meta> limita o zoom em dispositivos móveis"
+      "pass": "A tag &lt;meta&gt; não impede o zoom significativo em dispositivos móveis",
+      "fail": "A tag &lt;meta&gt; limita o zoom em dispositivos móveis"
     },
     "meta-viewport": {
-      "pass": "A tag <meta> não desabilita o zoom em dispositivos móveis",
-      "fail": "${data} na tag <meta> desabilita o zoom em dispositivos móveis"
+      "pass": "A tag &lt;meta&gt; não desabilita o zoom em dispositivos móveis",
+      "fail": "${data} na tag &lt;meta&gt; desabilita o zoom em dispositivos móveis"
     },
     "header-present": {
       "pass": "A página tem um cabeçalho (header)",
@@ -788,12 +788,12 @@ const ptBRrules = {
       "fail": "A página não tem nenhuma região (landmark)"
     },
     "meta-refresh": {
-      "pass": "A tag <meta> não atualiza a página imediatamente",
-      "fail": "A tag <meta> força atualizações temporizadas da página"
+      "pass": "A tag &lt;meta&gt; não atualiza a página imediatamente",
+      "fail": "A tag &lt;meta&gt; força atualizações temporizadas da página"
     },
     "p-as-heading": {
-      "pass": "Elementos <p> não são estilizados como títulos",
-      "fail": "Elementos de título devem ser utilizados no lugar de elementos <p> estilizados"
+      "pass": "Elementos &lt;p&gt; não são estilizados como títulos",
+      "fail": "Elementos de título devem ser utilizados no lugar de elementos &lt;p&gt; estilizados"
     },
     "region": {
       "pass": "Todo o conteúdo da página está contido em regiões (landmarks)",
@@ -842,8 +842,8 @@ const ptBRrules = {
       "incomplete": "Não foi possível determinar se o elemento tem filhos"
     },
     "doc-has-title": {
-      "pass": "O documento tem um elemento <title> não vazio",
-      "fail": "O documento não tem um elemento <title> não vazio"
+      "pass": "O documento tem um elemento &lt;title&gt; não vazio",
+      "fail": "O documento não tem um elemento &lt;title&gt; não vazio"
     },
     "exists": {
       "pass": "O elemento não existe",
@@ -915,7 +915,7 @@ const ptBRrules = {
       "fail": "A semântica padrão do elemento não foi sobrescrita com role=\"presentation\""
     },
     "svg-non-empty-title": {
-      "pass": "O elemento tem um filho <title>",
+      "pass": "O elemento tem um filho &lt;title&gt;",
       "fail": {
         "noTitle": "O elemento não tem um filho que seja 'title'",
         "emptyTitle": "O 'title' filho do elemento está vazio"
@@ -924,15 +924,15 @@ const ptBRrules = {
     },
     "caption-faked": {
       "pass": "A primeira linha de uma tabela não é usada como legenda",
-      "fail": "O primeiro elemento da tabela deve ser um <caption> em vez de uma célula da tabela"
+      "fail": "O primeiro elemento da tabela deve ser um &lt;caption&gt; em vez de uma célula da tabela"
     },
     "html5-scope": {
-      "pass": "O atributo 'scope' só é utilizado em elementos de cabeçalho de tabela (<th>)",
-      "fail": "No HTML 5, os atributos 'scope' só devem ser utilizados em elementos de cabeçalho de tabela (<th>)"
+      "pass": "O atributo 'scope' só é utilizado em elementos de cabeçalho de tabela (&lt;th&gt;)",
+      "fail": "No HTML 5, os atributos 'scope' só devem ser utilizados em elementos de cabeçalho de tabela (&lt;th&gt;)"
     },
     "same-caption-summary": {
-      "pass": "O conteúdo do atributo 'summary' e <caption> não estão duplicados",
-      "fail": "O conteúdo do atributo 'summary' e <caption> são idênticos"
+      "pass": "O conteúdo do atributo 'summary' e &lt;caption&gt; não estão duplicados",
+      "fail": "O conteúdo do atributo 'summary' e &lt;caption&gt; são idênticos"
     },
     "scope-value": {
       "pass": "O atributo 'scope' é usado corretamente",
@@ -960,10 +960,22 @@ const ptBRrules = {
   },
   "failureSummaries": {
     "any": {
-      "failureMessage": "Corrija qualquer um dos itens a seguir:{{~it:value}}\n  {{=value.split('\\n').join('\\n  ')}}{{~}}"
+      "failureMessage": (values) => {
+        const items = Array.isArray(values) ? values : [values];
+        return `Corrija qualquer um dos itens a seguir:\n${items.map(v => `  ${v}`).join('\n')}`;
+      }
     },
     "none": {
-      "failureMessage": "Corrija todos os itens a seguir:{{~it:value}}\n  {{=value.split('\\n').join('\\n  ')}}{{~}}"
+      "failureMessage": (values) => {
+        const items = Array.isArray(values) ? values : [values];
+        return `Corrija todos os itens a seguir:\n${items.map(v => `  ${v}`).join('\n')}`;
+      }
+    },
+    "all": {
+      "failureMessage": (values) => {
+        const items = Array.isArray(values) ? values : [values];
+        return `Corrija todos os itens a seguir:\n${items.map(v => `  ${v}`).join('\n')}`;
+      }
     }
   },
   "incompleteFallbackMessage": "Corrija todos os itens a seguir:{{~it:value}}\n  {{=value.split('\\n').join('\\n  ')}}{{~}}"
