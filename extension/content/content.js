@@ -102,25 +102,27 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                 element.style.outline = "3px solid #e33";
                 element.style.position = element.style.position || "relative";
 
-                // Cria o ícone de alerta flutuante
-                const icon = document.createElement("img");
-                icon.src = chrome.runtime.getURL("images/alert.png");
-                icon.alt = "Problema de acessibilidade detectado";
-                icon.className = "a11y-marker";
-                icon.style.width = "24px";
-                icon.style.height = "24px";
-                icon.style.position = "absolute";
-                icon.style.top = "-12px";
-                icon.style.right = "-12px";
-                icon.style.zIndex = "999999";
-                icon.style.cursor = "pointer";
-                icon.title = n.failureSummary;
+                  // Cria o ícone de alerta flutuante
+                  const icon = document.createElement("img");
+                  icon.src = chrome.runtime.getURL("images/alert.png");
+                  icon.alt = "Problema de acessibilidade detectado";
+                  icon.className = "a11y-marker";
+                  icon.style.width = "24px";
+                  icon.style.height = "24px";
+                  icon.style.position = "absolute";
+                  icon.style.top = "-12px";
+                  icon.style.right = "-12px";
+                  icon.style.zIndex = "999998";
+                  icon.style.cursor = "pointer";
+                  icon.style.pointerEvents = "auto";
+                  icon.title = v.help;
+                  
 
                 // Tooltip customizado (ao passar o mouse)
-                icon.addEventListener("mouseenter", (event) => {
+                icon.addEventListener("mouseenter", (eventevent) => {
                   const tooltip = document.createElement("div");
                   tooltip.className = "marker-tooltip";
-                  tooltip.textContent = n.failureSummary;
+                  tooltip.textContent = v.help
                   tooltip.style.position = "fixed";
                   tooltip.style.background = "#fff";
                   tooltip.style.border = "1px solid #e33";
@@ -134,6 +136,22 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                   tooltip.style.fontSize = "13px";
                   tooltip.style.color = "#000";
                   document.body.appendChild(tooltip);
+
+                    let top = event.clientY + 15;
+                    let left = event.clientX + 15;
+                                  
+                    // Se vai sair à direita, coloca à esquerda do mouse
+                    if (left + 250 > window.innerWidth) {
+                        left = event.clientX - 250 - 15;
+                    }
+                  
+                    // Se vai sair embaixo, coloca acima do mouse
+                    if (top + 100 > window.innerHeight) {
+                        top = event.clientY - 100 - 15;
+                    }
+                  
+                    tooltip.style.top = Math.max(10, top) + "px";
+                    tooltip.style.left = Math.max(10, left) + "px";
 
                   icon.addEventListener("mouseleave", () => {
                     tooltip.remove();
