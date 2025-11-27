@@ -4,59 +4,133 @@
       <meta charset="utf-8" />
       <title>Verificador de Acessibilidade</title>
       <style>
-        body { font-family: Arial, sans-serif; width: 350px; padding: 10px; }
-        button { padding: 6px 10px; margin-bottom: 8px; }
+        html{overflow-x: hidden;}
+        body {margin: 0; padding: 20px; font-family: Arial, sans-serif; width: 350px; background-color: black;}
+        button { padding: 6px 10px; margin-bottom: 8px; border: none; background-color: inherit; color: white;}
         .violation { border: 1px solid #e33; padding: 6px; margin-top: 6px; border-radius: 4px; }
-        nav {display: flex; flex-direction: row;}
-        #wrapper {display: flex; flex-direction: column;}
+        nav {display: flex; flex-direction: row; justify-content: center;}
+
+        #status{
+          text-align: center;
+        }
 
         #filter-container {
-            margin-bottom: 10px;
             padding: 10px;
-            background-color: #f0f0f0;
+            background-color: none;
             border-radius: 5px;
+            color: white;
         }
         #filter-container select {
             width: 100%;
             padding: 5px;
             margin-top: 5px;
+
+        }
+
+        #wrapper {
+          display: flex; 
+          flex-direction: column;
+          
+          border-left:white 1px solid; 
+          border-right:white 1px solid; 
+          border-bottom:white 1px solid; 
+          
+          flex: 1; 
+          overflow-y: auto; 
+          max-height: 400px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        #wrapper::-webkit-scrollbar {
+          width: 16px;
+        }
+        
+        #wrapper::-webkit-scrollbar-track {
+          background: #000000;
+          border-radius: 5px;
+          background-clip: content-box;
+          border: 4px solid transparent;
+        }
+        
+        #wrapper::-webkit-scrollbar-thumb {
+          background: #2404c5;
+          border-radius: 5px;
+          border: 2px solid transparent;
+          background-clip: content-box;
+        }
+        
+        #wrapper::-webkit-scrollbar-thumb:hover {
+          background: #ffffff;
+        }
+        
+        /* Estilos para alinhar imagem e título */
+        .header-content {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+        }
+        .logo-container {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+        }
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .header-title {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color: white;
+            flex: 1;
         }
       </style>
       <script src="jquery-3.7.1.min.js"></script>
     </head>
     <body>
-      <h3>Verificador de Acessibilidade</h3>
-      <nav>
-        <button id="projeto">Checklist</button>
-      </nav>
-
-      <button id="runBtn">Rodar verificação</button>
-      <button id="clearBtn">Limpar marcações</button>
-
-      
-      <div id="filter-container">
-        <label for="categoryFilter"><strong>Filtrar por categoria:</strong></label>
-        <select id="categoryFilter">
-            <option value="all">Todos</option>
-            <option value="Teclado">Teclado</option>
-            <option value="Foco">Foco</option>
-            <option value="Cabeçalhos">Cabeçalhos</option>
-            <option value="Links">Links</option>
-            <option value="Imagens">Imagens</option>
-            <option value="Formulários">Formulários</option>
-            <option value="Estrutura Semântica">Estrutura Semântica</option>
-            <option value="Títulos e Rótulos">Títulos e Rótulos</option>
-            <option value="Contraste">Contraste</option>
-            <option value="Multimídia">Multimídia</option>
-            <option value="Navegação">Navegação</option>
-            <option value="Responsividade">Responsividade</option>
-            <option value="ARIA">ARIA</option>
-            <option value="Animações">Animações</option>
-            <option value="Outros">Outros</option>
-        </select>
+      <header style="border-top:  white 1px solid; border-left:  white 1px solid; border-right:  white 1px solid;; background-color: #000044; padding-top: 10px; border-top-left-radius: 20px; border-top-right-radius: 20px;">
+        <div class="header-content">
+          <div class="logo-container">
+            <img src="images/symbol.png" alt="Símbolo do Verificador de Acessibilidade">
+          </div>
+          <h1 class="header-title">
+            Verificador de Acessibilidade
+          </h1>
+        </div>
+        <nav>
+          <button id="projeto">Checklist</button>
+          <button id="runBtn">Rodar verificação</button>
+          <button id="clearBtn">Limpar marcações</button>
+        </nav>
+      </header>
+      <div style="border-right: white 1px solid; border-left: white 1px solid;">
+        <div id="filter-container">
+          <label for="categoryFilter"><strong>Filtrar por categoria:</strong></label>
+          <select id="categoryFilter">
+              <option value="all">Todos</option>
+              <option value="Teclado">Teclado</option>
+              <option value="Foco">Foco</option>
+              <option value="Cabeçalhos">Cabeçalhos</option>
+              <option value="Links">Links</option>
+              <option value="Imagens">Imagens</option>
+              <option value="Formulários">Formulários</option>
+              <option value="Estrutura Semântica">Estrutura Semântica</option>
+              <option value="Títulos e Rótulos">Títulos e Rótulos</option>
+              <option value="Contraste">Contraste</option>
+              <option value="Multimídia">Multimídia</option>
+              <option value="Navegação">Navegação</option>
+              <option value="Responsividade">Responsividade</option>
+              <option value="ARIA">ARIA</option>
+              <option value="Animações">Animações</option>
+              <option value="Outros">Outros</option>
+          </select>
+        </div>
+         <div id="status"></div>
       </div>
-
-      <div id="status"></div>
       <div id="wrapper">
         <div id="checklist"></div>
         <div id="results"></div>  

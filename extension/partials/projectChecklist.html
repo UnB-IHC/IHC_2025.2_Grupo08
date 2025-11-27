@@ -7,13 +7,13 @@
   <style>
     /* style separado conforme solicitado */
     :root{
-      --bg:#fff; --text:#111; --muted:#666; --accent:#0b5fff;
-      --card:#f8f9fb; --focus-outline: 3px solid #ffd54f;
+      --bg:#fff; --text:#ffffff; --muted:#ffffff; --accent:#0b5fff;
+      --card:#011c50; --focus-outline: 3px solid #ffd54f;
     }
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); margin:24px;}
-    h1{font-size:1.5rem; margin-bottom:.25rem;}
-    h2{font-size:1.15rem; margin:18px 0 8px;}
-    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px;}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text); margin:0; background-color: black;}
+    h2{margin-bottom:.25rem; color: white;}
+    h3{margin:18px 0 8px; color: white;}
+    .grid{overflow-x: hidden; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px;}
     .card{background:var(--card); padding:14px; border-radius:12px; box-shadow:0 1px 3px rgba(0,0,0,.04);}
     .list{list-style:none; margin:0; padding:0;}
     .item{display:flex; align-items:flex-start; gap:10px; padding:8px; border-radius:8px;}
@@ -30,10 +30,10 @@
       position:absolute;
       left:0;
       top:calc(100% + 8px);
-      min-width:260px;
+      min-width:200px;
       padding:10px;
       border-radius:8px;
-      background:#fff;
+      background:#000000;
       box-shadow:0 6px 18px rgba(0,0,0,.12);
       border:1px solid #e6e9ef;
       display:none;
@@ -49,31 +49,31 @@
   </style>
 </head>
 <body>
-  <h1>Checklist de Acessibilidade — por Área</h1>
+  <h2>Checklist de Acessibilidade — por Área</h2>
   <p class="muted">Fonte: Checklist IHC (arquivo enviado). Itens com critério de alto nível mostram <strong>Não Aplicável</strong>.</p>
 
   <div class="grid">
     <!-- Gestão de projetos -->
     <section class="card" aria-labelledby="gproj">
-      <h2 id="gproj">Gestão de projetos</h2>
+      <h3 id="gproj">Gestão de projetos</h3>
       <ul class="list" id="list-gestao"></ul>
     </section>
 
     <!-- Desenvolvimento -->
     <section class="card" aria-labelledby="dev">
-      <h2 id="dev">Desenvolvimento</h2>
+      <h3 id="dev">Desenvolvimento</h3>
       <ul class="list" id="list-desenvolvimento"></ul>
     </section>
 
     <!-- Design -->
     <section class="card" aria-labelledby="design">
-      <h2 id="design">Design</h2>
+      <h3 id="design">Design</h3>
       <ul class="list" id="list-design"></ul>
     </section>
 
     <!-- Conteúdo -->
     <section class="card" aria-labelledby="conteudo">
-      <h2 id="conteudo">Conteúdo</h2>
+      <h3 id="conteudo">Conteúdo</h3>
       <ul class="list" id="list-conteudo"></ul>
     </section>
   </div>
