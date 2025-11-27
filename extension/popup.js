@@ -80,6 +80,21 @@ document.getElementById("runBtn").addEventListener("click", async () => {
         return;
       }
 
+    
+        console.log('[popup.js] highlightChecklist:', results.highlightChecklist);
+        results.highlightChecklist.forEach((id) => {
+          try {
+            const el = document.getElementById(id);
+            if (el) {
+              el.style.outline = "red 2px solid";
+            } else {
+              console.warn('[popup.js] Elemento não encontrado para id:', id);
+            }
+          } catch (err) {
+            console.error('[popup.js] Erro ao aplicar destaque em', id, err);
+          }
+        });
+
       status.textContent = `${results.violations.length} problemas encontrados em "${selectedFilter}":`;
       results.violations.forEach((v) => {
         const div = document.createElement("div");
@@ -122,12 +137,12 @@ $(function(){
        }); 
     });
 
-    document.getElementById("guia").addEventListener("click", () => {
-       $("#checklist").load("partials/projectChecklist.html", () => { // Suponho que tenha um guiaChecklist.html ou similar
-           const currentFilter = document.getElementById('categoryFilter').value;
-           applyFilter(currentFilter);
-       }); 
-    });
+    // document.getElementById("guia").addEventListener("click", () => {
+    //    $("#checklist").load("partials/projectChecklist.html", () => { // Suponho que tenha um guiaChecklist.html ou similar
+    //        const currentFilter = document.getElementById('categoryFilter').value;
+    //        applyFilter(currentFilter);
+    //    }); 
+    // });
 
     // Listener do Filtro (Usa delegação de evento para funcionar sempre)
     $(document).on('change', '#categoryFilter', function() {
