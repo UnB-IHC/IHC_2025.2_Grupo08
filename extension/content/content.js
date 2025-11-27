@@ -9,21 +9,171 @@ console.log("[content.js] axeConfig disponível?", typeof axeConfig !== 'undefin
 console.log("[content.js] translateViolation disponível?", typeof translateViolation !== 'undefined');
 console.log("[content.js] ptBRrules disponível?", typeof ptBRrules !== 'undefined');
 const categoryRuleMap = {
-  "Teclado": ["keyboard", "scrollable-region-focusable", "tabindex", "keyboard-access"],
-  "Foco": ["focus-visible", "focus-order", "focus-trap", "focusable"],
-  "Cabeçalhos": ["heading-order", "page-has-heading-one", "structure"],
-  "Links": ["link-name", "link-purpose", "link-text"],
-  "Imagens": ["image-alt", "alt-text", "image-redundant-alt"],
-  "Formulários": ["label", "form-field-multiple-labels", "input-button-name", "button-name"],
-  "Estrutura Semântica": ["html5-scope", "landmark-main-is-top-level", "landmark-unique", "html-lang"],
-  "Títulos e Rótulos": ["button-name", "document-title", "frame-title", "heading-order"],
-  "Contraste": ["color-contrast"],
-  "Multimídia": ["audio-caption", "video-caption", "audio-description", "video-description"],
-  "Navegação": ["landmark-main-is-top-level", "landmark-unique", "skip-link"],
-  "Responsividade": ["meta-viewport", "mobile-viewport"],
-  "ARIA": ["aria-required-attr", "aria-roles", "aria-allowed-attr", "aria-valid-attr"],
-  "Animações": ["prefers-reduced-motion"]
+  "Teclado": [
+    "tabindex",                  // ordem de foco não quebrada
+    "scrollable-region-focusable"// regiões roláveis acessíveis via teclado
+  ],
+  "Foco": [
+    "focus-order-semantics"      // função apropriada na ordem de foco
+    // (focus-trap/focusable não existem como rule ID no axe-core)
+  ],
+  "Cabeçalhos": [
+    "page-has-heading-one",
+    "heading-order",
+    "empty-heading"
+  ],
+  "Links": [
+    "link-name",
+    "identical-links-same-purpose",
+    "link-in-text-block"
+  ],
+  "Imagens": [
+    "image-alt",
+    "input-image-alt",
+    "role-img-alt",
+    "svg-img-alt",
+    "image-redundant-alt",
+    "object-alt",
+    "area-alt"
+  ],
+  "Formulários": [
+    "label",
+    "label-title-only",
+    "label-content-name-mismatch",
+    "form-field-multiple-labels",
+    "input-button-name",
+    "select-name",
+    "autocomplete-valid"
+  ],
+  "Estrutura Semântica": [
+    "list",
+    "listitem",
+    "definition-list",
+    "dlitem",
+    "region",
+    "landmark-one-main",
+    "landmark-unique",
+    "landmark-no-duplicate-main",
+    "landmark-no-duplicate-banner",
+    "landmark-no-duplicate-contentinfo",
+    "landmark-main-is-top-level",
+    "landmark-banner-is-top-level",
+    "landmark-contentinfo-is-top-level",
+    "landmark-complementary-is-top-level",
+    "scope-attr-valid",
+    "table-fake-caption",
+    "table-duplicate-name",
+    "td-has-header",
+    "td-headers-attr",
+    "th-has-data-cells"
+  ],
+  "Títulos e Rótulos": [
+    "document-title",
+    "frame-title",
+    "frame-title-unique",
+    "button-name",
+    "input-button-name"
+  ],
+  "Contraste": [
+    "color-contrast",
+    "color-contrast-enhanced",
+    "link-in-text-block"
+  ],
+  "Multimídia": [
+    "audio-caption",
+    "video-caption",
+    "no-autoplay-audio"
+  ],
+  "Navegação": [
+    "bypass",                    // pelo menos um mecanismo de ignorar blocos
+    "skip-link",                 // destino de link de escape válido
+    "region",
+    "landmark-one-main"
+  ],
+  "Responsividade": [
+    "meta-viewport",
+    "meta-viewport-large",
+    "css-orientation-lock"
+  ],
+  "ARIA": [
+    "aria-allowed-attr",
+    "aria-allowed-role",
+    "aria-required-attr",
+    "aria-required-children",
+    "aria-required-parent",
+    "aria-roles",
+    "aria-valid-attr",
+    "aria-valid-attr-value",
+    "aria-roledescription",
+    "aria-text",
+    "aria-command-name",
+    "aria-input-field-name",
+    "aria-dialog-name",
+    "aria-meter-name",
+    "aria-progressbar-name",
+    "aria-toggle-field-name",
+    "aria-tooltip-name",
+    "aria-treeitem-name"
+  ],
+  "Idioma": [
+    "html-has-lang",
+    "html-lang-valid",
+    "valid-lang",
+    "html-xml-lang-mismatch"
+  ],
+  "Espaçamento de Texto": [
+    "avoid-inline-spacing"
+  ]
 };
+
+
+const RuleCriteriaMapping = {
+  "tabindex": ['d-1.4'],
+  "focus-order-semantics": ['d-1.4'],
+  "region": ['d-4.1'],
+  "landmark": ['d-4.1'],
+  "page-has-main": ['d-4.1'],
+  "header-present": ['d-4.1'],
+  "list": ['d-5.1'],
+  "listitem": ['d-5.1'],
+  "link-name": ['c-7.2'],
+  "identical-links-same-purpose": ['c-7.5'],
+  "bypass": ['ds-7.6'],
+  "skip-link": ['ds-7.6'],
+  "label": ['d-9.1'],
+  "label-title-only": ['d-9.1'],
+  "label-content-name-mismatch": ['d-9.1'],
+  "button-name": ['d-8.1'],
+  "input-button-name": ['d-8.1'],
+  "th-has-data-cells": ['d-6.3'],
+  "td-has-header": ['d-6.3'],
+  "scope-attr-valid": ['d-6.3'],
+  "empty-table-header": ['d-6.3'],
+  "image-alt": ['c-2.1'],
+  "input-image-alt": ['c-2.1'],
+  "role-img-alt": ['c-2.1'],
+  "svg-img-alt": ['c-2.1'],
+  "image-redundant-alt": ['c-2.1'],
+  "html-has-lang": ['d-13.2'],
+  "html-lang-valid": ['d-13.2'],
+  "valid-lang": ['d-13.2'],
+  "html-xml-lang-mismatch": ['d-13.2'],
+  "page-has-heading-one": ['c-3.1'],
+  "heading-order": ['c-3.3'],
+  "empty-heading": ['c-3.1'],
+  "avoid-inline-spacing": ['ds-12.2', 'ds-12.3', 'ds-12.4', 'ds-12.5'],
+  "color-contrast": ['ds-11.2', 'ds-11.3'],
+  "color-contrast-enhanced": ['ds-11.2', 'ds-11.3'],
+  "link-in-text-block": ['ds-11.2', 'ds-11.3'],
+  // Não possui rule específica para 44x44px, mantido de acordo:
+  // "no-rule-44px": [],
+  "meta-viewport": ['d-13.3'],
+  "meta-viewport-large": ['d-13.3'],
+  // Não possui rule específica para acionamento apenas por foco de cursor:
+  // "no-rule-focus-activation": []
+}
+
+const highlightChecklist = new Set([]);
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   console.log("[content.js] ===== MENSAGEM RECEBIDA =====");
@@ -163,6 +313,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                 console.warn("[content.js] Erro ao processar elemento:", elemErr);
               }
             });
+            RuleCriteriaMapping[v.id] ? RuleCriteriaMapping[v.id].forEach((criteria) => {highlightChecklist.add(criteria)}) : null;
           });
         });
         
@@ -172,7 +323,8 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         const responseResults = {
           ...results,
           violations: filteredViolations,
-          totalViolations: results.violations.length
+          totalViolations: results.violations.length,
+          highlightChecklist: Array.from(highlightChecklist),
         };
         
         sendResponse({ success: true, results: responseResults });
